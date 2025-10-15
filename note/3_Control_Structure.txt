@@ -1,0 +1,144 @@
+## Control Structure
+
+# Sequential >> Top-To-Bottom
+# Selection (or Condition) >> if, if-else, switch
+# Iteation (or Loop) >> for while, do-while
+
+Condition
+	1. if else
+	2. switch
+
+Condition Statement
+	1.Comparison Statement : ==, !=, <, > <=, >=
+	2.Logical statement : &&, ||, !
+
+
+# IF-ELSE
+Case 1: One-And-Other
+	if <condition statement> {
+		// do when true
+	} else {
+		// do when false
+	}
+
+	Example:
+		func main() {
+			var score int = 62
+
+			if score >= 70 {
+				fmt.Printf("PASSED")
+			} else {
+				fmt.Printf("FAILED")
+			}
+		}
+
+Case 2: Multiple-And-Other
+	if <condition statement 1> {
+		// do when condition 1 was true
+	} else if <condition statement 2> {
+		// do when condition 2 was true
+	} {
+		// do when false
+	}
+
+	Example:
+		func main() {
+			var score int = 62
+			var grade string
+
+			if score >= 80 {
+				grade = "A"
+			} else if score >= 70 {
+				grade = "B"
+			} else if score >= 80 {
+				grade = "C"
+			} else {
+				grade = "F"
+			}
+		}
+
+
+# SWITCH
+	switch variable {
+		case value1:
+			// do when variable == value1
+		case value2:
+			// do when variable == value2
+		default:
+			// do when variable mismatch with any cases
+	}
+
+	Example
+		func main() {
+			var dayOfWeek = 3
+			
+			switch dayOfWeek {
+				case 1:
+					fmt.Println("Monday")
+				case 2:
+					fmt.Println("Tueday")
+				case 3:
+					fmt.Println("Wednesday")		// this 
+				case 4:
+					fmt.Println("Thursday")
+				case 5:
+					fmt.Println("Friday")
+				case 6:
+					fmt.Println("Saturday")
+				case 7:
+					fmt.Println("Sunday")
+				default:
+					fmt.Println("Invalid day")
+			}
+		}
+
+
+# Pre process if else
+Normal case:
+	num1 := 5
+	num2 := 10
+	sumNum := num1 + num2
+
+	if sumNum >= 10 {
+		fmt.Println("sumNum more than 10")
+	}
+
+Pre-define case:
+	num1 := 5
+	num2 := 10
+
+	if sumNum := num1 + num2; sumNum >= 10 {
+		fmt.Println("sumNum more than 10")
+	}
+
+
+
+
+
+# Iteration (loop)
+	1.For Loop
+	2.Do While Loop
+	3.While Loop
+
+>> For Loop
+	for i := 1; 1 < 10; i++ {
+		fmt.Printf("number: %d\n", i)
+	}
+
+>> Do While Loop
+	i := 1
+	for {
+		fmt.Printf("number: %d\n", i)
+		i++
+
+		if 1 >= 10 {
+			break
+		}
+	}
+
+>> While Loop
+	i := 1
+	for i < 10 {
+		fmt.Printf("number: %d\n", i)
+		i++
+	}

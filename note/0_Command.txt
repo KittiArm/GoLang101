@@ -1,0 +1,20 @@
+## Basic command
+
+# Run by file
+	>> go run main.go
+
+# Run build
+	>> go build main.go
+
+# Run by nodemon
+	>> nodemon --exec go run main.go --signal.SIGTERM
+
+
+# To use Go module
+	>> go mod init github/KittiArm/golang
+
+# To install/get libraly
+	>> go get .....
+
+# To get package list
+	>> go list -m all

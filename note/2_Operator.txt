@@ -1,0 +1,35 @@
+## Operator
+
+# 1: Arithmatic Operators
+	a := 15
+	b := 6
+	fmt.Println(a + b) 	// 21
+	fmt.Println(a - b) 	// 9
+	fmt.Println(a * b) 	// 90
+	fmt.Println(a / b) 	// 2
+	fmt.Println(a % b) 	// 3
+
+	age := 25
+	age = age * 2
+	fmt.Println(age) 	// 50
+
+	c := "Kitti"
+	d := "Arm"
+	aka := c + d
+	fmt.Println(aka) 	// "KittiArm" (able to use only + for concat string)
+
+
+# 2: Relational Operators
+	fmt.Println(a == b) 	// false
+	fmt.Println(a != b) 	// true
+	fmt.Println(a > b) 		// true
+	fmt.Println(a < b) 		// false
+	fmt.Println(a >= b) 	// true
+	fmt.Println(a <= b) 	// false
+
+# 3: Logical Operators
+	e := true
+	f := false
+	fmt.Println(e && f) 	// false
+	fmt.Println(e || f) 	// true
+	fmt.Println(!e) 		// false
