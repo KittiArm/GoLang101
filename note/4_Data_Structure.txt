@@ -10,6 +10,8 @@
 			fmt.Println(myArray[1])		// B
 			fmt.Println(len(myArray))	// lenght of the Array = 3
 
+
+
 	2.Slice
 		>> the same way with Array but neccessary to set data size
 			var mySlice []int{10, 20, 30, 40, 50}
@@ -30,9 +32,36 @@
 			mySlice2 = append(mySlice2, "D", "E")
 			fmt.Println(mySlice2)			// [A, B, C, D, E]
 
+
+
 	3.Map
 		>> similiar with dictionary to collect data as key and value
-			map[string]int
+			myMap := make(map[string]int)
+			myMap["apple"] = 5
+			myMap["banana"] = 10
+			myMap["orange"] = 8
+
+			fmt.Println(myMap)				// map[apple:5, banana:10, orange:8]
+
+			for key, value := range myMap {
+				fmt.Printf("%s --> %d\n", key, value)
+			}
+			// apple --> 5
+			// banana --> 10
+			// orange --> 8
+
+			delete(myMap, "banana")
+
+
+			# Checking if a key exists
+			val, ok := myMap["pear"]
+			if ok {
+				fmt.Printf("Pear's value:", val)
+			} else {
+				fmt.Printf("Pear was not found in map")
+			}
+ 
+
 
 	4.Struct
 		>> a variable that consists of variable group to be a variable (similiar with Object) by set feild and type
@@ -40,22 +69,30 @@
 				Name string
 				Age int
 			}
-	
+
+
+
 	5.Function
 		>> 
 			var squareFunc func(int) int = square
-	
+
+
+
 	6.Interface
 		>> data type that define set of method to use this data type
 			type Shape interface {
 				Area() float64
 				Perimeter() float64
 			}
-	
+
+
+
 	7.Poiter
 		>> data type to collect the memory address of variable
 			var p *int
-	
+
+
+
 	8.Channel
 		>> data type for the communication between gorountines (for concurrent thread of Go execution). By set chan int
 
